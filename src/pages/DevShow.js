@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 
 
-class Show extends Component{
+class DevShow extends Component{
 
 
 render(){
@@ -19,4 +19,4 @@ return(
 
 }
 
-export default Show
+export default DevShow

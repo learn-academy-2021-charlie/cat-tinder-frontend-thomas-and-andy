@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 
 
-class New extends Component{
+class DevNew extends Component{
 
 
 render(){
@@ -19,4 +19,4 @@ return(
 
 }
 
-export default New
+export default DevNew

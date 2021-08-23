@@ -1,13 +1,19 @@
-import './App.css'
-import React, {Component} from 'react'
-import Home from './pages/Home'
-import Index from './pages/DevIndex'
-import Show from './pages/DevShow'
-import New from './pages/DevNew'
-import Edit from './pages/DevEdit'
-import NotFound from './pages/NotFound'
+import React, { Component } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Home from './pages/Home'
+import DevIndex from './pages/DevIndex'
+import DevShow from './pages/DevShow'
+import DevNew from './pages/DevNew'
+import DevEdit from './pages/DevEdit'
+import NotFound from './pages/NotFound'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom'
+
+
 
 class App extends Component {
 constructor(){
@@ -18,19 +24,20 @@ constructor(){
 }
   render(){
   return (
-    <div className="App">
+    <Router>
       <Header/>
 
+<Switch>
       <Home/>
-      <Index/>
-      <Show/>
-      <New/>
-      <Edit/>
+      <DevIndex/>
+      <DevShow/>
+      <DevNew/>
+      <DevEdit/>
       <NotFound/>
-
+      </Switch>
       <Footer/>
 
-    </div>
+      </Router>
   );
 }
 }

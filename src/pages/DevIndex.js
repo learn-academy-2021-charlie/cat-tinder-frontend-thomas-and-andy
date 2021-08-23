@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 
 
-class Index extends Component{
+class DevIndex extends Component{
 
 
 render(){
@@ -19,4 +19,4 @@ return(
 
 }
 
-export default Index
+export default DevIndex

@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 
 
-class Edit extends Component{
+class DevEdit extends Component{
 
 
 render(){
@@ -19,4 +19,4 @@ return(
 
 }
 
-export default Edit
+export default DevEdit
