@@ -4,9 +4,15 @@ import { Card, CardTitle, Col, CardText, CardImg } from "reactstrap";
 class DevShow extends Component {
   render() {
     return (
-      <>
-      <h3>This is the Show</h3>
+      <div className="showpage">
+        <h3>This is the Show</h3>
         <Col sm="6">
+          <CardImg
+            top
+            width="100%"
+            src={this.props.job && this.props.job.img}
+            alt="company picture"
+          />
           <Card body>
             <CardTitle> {this.props.job && this.props.job.job_title}</CardTitle>
             <CardText>
@@ -18,7 +24,7 @@ class DevShow extends Component {
             </CardText>
           </Card>
         </Col>
-      </>
+      </div>
     );
   }
 }
