@@ -7,6 +7,8 @@ import DevShow from './pages/DevShow'
 import DevNew from './pages/DevNew'
 import DevEdit from './pages/DevEdit'
 import NotFound from './pages/NotFound'
+import jobs from'./mockJobs'
+import './App.css'
 import {
   BrowserRouter as Router,
   Route,
@@ -19,21 +21,22 @@ class App extends Component {
 constructor(){
   super()
   this.state={
-
+    jobs: jobs
   }
 }
   render(){
+    console.log(this.state.jobs)
   return (
-    <Router>
-      <Header/>
+    <Router >
+      <Header />
 
 <Switch>
-      <Home/>
-      <DevIndex/>
-      <DevShow/>
-      <DevNew/>
-      <DevEdit/>
-      <NotFound/>
+      <Route exact path="/" component={Home} />
+      <Route path="/devindex" component={DevIndex} />
+      <Route path="/devshow" component={DevShow} />
+      <Route path="/devnew" component={DevNew} />
+      <Route path="/devedit" component={DevEdit} />
+      <Route component={NotFound} />
       </Switch>
       <Footer/>
 
