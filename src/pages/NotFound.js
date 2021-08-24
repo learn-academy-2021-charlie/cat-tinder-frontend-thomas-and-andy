@@ -8,8 +8,8 @@ class NotFound extends Component{
 
 
 render(){
-return(
-    <div className = 'notfound'>
+    return(
+        <div className = 'notfound'>
       <Jumbotron className='jumbotron'>
         <h1 className="display-3">The Job you are looking for is not found!</h1>
         <p className='jumbo-button'>
@@ -17,9 +17,7 @@ return(
         </p>
       </Jumbotron>
     </div>
-
-
-)
+    )
 
 }
 

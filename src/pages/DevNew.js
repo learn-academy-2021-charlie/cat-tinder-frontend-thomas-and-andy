@@ -1,22 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-
-
-class DevNew extends Component{
-
-
-render(){
-return(
-    <>
-<h3>This is the New</h3>
-
-    </>
-
-
-)
-
+class DevNew extends Component {
+  render() {
+    return (
+      <>
+        <h3>This is the New</h3>
+      </>
+    );
+  }
 }
 
-}
-
-export default DevNew
+export default DevNew;
