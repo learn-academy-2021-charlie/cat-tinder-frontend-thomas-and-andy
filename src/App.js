@@ -18,11 +18,13 @@ class App extends Component {
       jobs: jobs,
     };
   }
-createDevJob = (newDevJob) =>{
-  console.log(newDevJob)
-}
-
-
+  createDevJob = (newDevJob) => {
+    console.log(newDevJob);
+  };
+  updateDevJob = (editdevjob, id) => {
+    console.log("job:", editdevjob);
+    console.log("id:", id);
+  };
   render() {
     return (
       <Router>
@@ -42,8 +44,19 @@ createDevJob = (newDevJob) =>{
               return <DevShow job={job} />;
             }}
           />
-          <Route path="/devnew" render={(props) => <DevNew createDevJob={this.createDevJob} />} />
-          <Route path="/devedit" component={DevEdit} />
+          <Route
+            path="/devnew"
+            render={(props) => <DevNew createDevJob={this.createDevJob} />}
+          />
+          {/* <Route path="/devedit" component={DevEdit} /> */}
+          <Route
+            path={"/devedit/:id"}
+            render={(props) => {
+              let id = props.match.params.id;
+              let job = this.state.jobs.find((job) => job.id === +id);
+              return <DevEdit updateDevJob={this.updateDevJob} job={job} />;
+            }}
+          />
           <Route component={NotFound} />
         </Switch>
         <Footer />
