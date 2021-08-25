@@ -7,7 +7,7 @@ class Header extends Component {
     return (
       <div className="header">
         <NavBar />
-        <MdWork color="#00FF72" size="5rem" opacity="0.6" />
+        <MdWork color="#00FF72" size="4rem" opacity="0.6" />
         <h4>DevMatch</h4>
       </div>
     );
