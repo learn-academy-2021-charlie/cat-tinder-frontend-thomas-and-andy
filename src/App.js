@@ -18,8 +18,12 @@ class App extends Component {
       jobs: jobs,
     };
   }
+createDevJob = (newDevJob) =>{
+  console.log(newDevJob)
+}
+
+
   render() {
-    console.log(this.state.jobs);
     return (
       <Router>
         <Header />
@@ -38,7 +42,7 @@ class App extends Component {
               return <DevShow job={job} />;
             }}
           />
-          <Route path="/devnew" component={DevNew} />
+          <Route path="/devnew" render={(props) => <DevNew createDevJob={this.createDevJob} />} />
           <Route path="/devedit" component={DevEdit} />
           <Route component={NotFound} />
         </Switch>
