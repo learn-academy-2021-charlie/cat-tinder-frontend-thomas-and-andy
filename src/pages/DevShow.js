@@ -26,7 +26,9 @@ class DevShow extends Component {
           </Card>
         </Col>
 
-        <NavLink to="/devindex">Index</NavLink>
+        <NavLink to={`/devedit/${this.props.job.id}`}>
+          <button>Edit</button>
+        </NavLink>
       </div>
     );
   }
