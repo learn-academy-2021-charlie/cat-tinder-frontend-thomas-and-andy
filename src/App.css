@@ -1,12 +1,13 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0%;
+  padding: 0%;
 }
 .page-body {
+  margin-top: 0;
+  padding: 0%;
   text-align: center;
-  /* margin: 3rem; */
-  height: 110vh;
-  background-color: rgba(129, 111, 111, 0.151);
+  min-height: 110vh;
+  background-color: rgba(71, 70, 70, 0.384);
 }
 
 .cards {
@@ -17,7 +18,7 @@
 }
 
 .navBar {
-  background-color: rgb(157, 85, 224);
+  background-color: rgb(113, 44, 141);
   color: "text-white";
 }
 #indexImg {
@@ -40,22 +41,25 @@
   bottom: 0;
   width: 100%;
   text-align: center;
-  min-height: 5vh;
-
+  min-height: 2vh;
   font-size: 20px;
   display: flex;
   justify-content: space-around;
+  font-size: 2px;
 }
 
 .header {
-  min-height: 17vh;
-  /* background-image: url("https://www.silver-atena.com/fileadmin/resources/pictures/portfolio/engineering/SiA_Header_Engineering_Software.jpg"); */
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: 15vh;
   -webkit-background-size: cover;
   background-size: 1380px 150px;
   background-repeat: no-repeat;
   opacity: 0.8;
   background-color: black;
   top: 0;
+  overflow: hidden;
 }
 .jumbotron {
   background-color: black;
@@ -65,8 +69,4 @@
   min-height: 110vh;
   background-size: cover;
   background-image: url("https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGV2ZWxvcGVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
-}
-.header-logo {
-  background-color: black;
-  height: 20px;
 }

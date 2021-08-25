@@ -48,7 +48,6 @@ class App extends Component {
             path="/devnew"
             render={(props) => <DevNew createDevJob={this.createDevJob} />}
           />
-          {/* <Route path="/devedit" component={DevEdit} /> */}
           <Route
             path={"/devedit/:id"}
             render={(props) => {

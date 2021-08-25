@@ -29,28 +29,25 @@ const NavBar = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/devindex" className="text-white">
+              <NavLink href="/devindex"  className="text-white">
                 Jobs
               </NavLink>
             </NavItem>
-            {/* <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                GitHub
-              </NavLink>
-            </NavItem> */}
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret className="text-white">
-                Options
+                More
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>Option 1</DropdownItem>
+                <DropdownItem>
+                  <NavLink href="/devnew" className="text-black">
+                    Add a Job
+                  </NavLink>
+                </DropdownItem>
                 <DropdownItem>Option 2</DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          {/* <NavbarText>Simple Text</NavbarText> */}
         </Collapse>
       </Navbar>
     </div>
