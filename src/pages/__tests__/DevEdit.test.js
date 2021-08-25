@@ -6,9 +6,9 @@ import DevEdit from "../DevEdit";
 Enzyme.configure({ adapter: new Adapter() });
 
 describe("When DevEdit renders", () => {
-  it("displays a form for editing the associated id", () => {
+  it("displays a h3 tag identifying as a the edit page", () => {
     const devEdit = shallow(<DevEdit />);
-    const editForm = devEdit.find("handeSubmit");
+    const editForm = devEdit.find("h3");
     expect(editForm.length).toEqual(1);
   });
 });
