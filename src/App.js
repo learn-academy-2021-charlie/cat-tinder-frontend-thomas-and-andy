@@ -26,8 +26,18 @@ class App extends Component {
 
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/devindex" component={DevIndex} />
-          <Route path="/devshow" component={DevShow} />
+          <Route
+            path="/devindex"
+            render={(props) => <DevIndex jobs={this.state.jobs} />}
+          />
+          <Route
+            path="/devshow/:id"
+            render={(props) => {
+              let id = props.match.params.id;
+              let job = this.state.jobs.find((job) => job.id === +id);
+              return <DevShow job={job} />;
+            }}
+          />
           <Route path="/devnew" component={DevNew} />
           <Route path="/devedit" component={DevEdit} />
           <Route component={NotFound} />
