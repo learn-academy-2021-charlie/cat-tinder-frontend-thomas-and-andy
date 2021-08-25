@@ -19,7 +19,7 @@ class DevShow extends Component {
             <CardText>
               Description: {this.props.job && this.props.job.job_description}
               <br />
-              Company: {this.props.job && this.props.job.job_company}
+              Might enjoy {this.props.job && this.props.job.might_enjoy}
               <br />
               Salary: {this.props.job && this.props.job.job_salary}.
             </CardText>
