@@ -5,7 +5,6 @@ import { Card, CardTitle, Col, CardImg } from "reactstrap";
 class DevIndex extends Component {
   render() {
     return (
-      
       <div className="index">
         <h3>This is the index</h3>
         <br />
