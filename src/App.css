@@ -7,11 +7,20 @@
   padding: 0%;
   text-align: center;
   min-height: 110vh;
-  background-color: rgba(71, 70, 70, 0.384);
+  margin: 0;
+	background-size: cover;
+	background-position: center center;
+  width: 170vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	animation: change-bg 12s infinite;
+	transform: all ease;
 }
 
 .cards {
-  left: 60%;
+ align-items: center;
 }
 .indexCards {
   left: 50%;
@@ -98,4 +107,20 @@
 	100% {		
 		background-image: url(https://images.unsplash.com/photo-1454165205744-3b78555e5572?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=);
 	}
+}
+.show{
+  margin-top: 0%;
+  padding: 0%;
+  text-align: center;
+  min-height: 110vh;
+  background-size: cover;
+	background-position: center center;
+  width: 160vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	animation: change-bg 12s infinite;
+	transform: all ease;
+  left: 30;
 }
