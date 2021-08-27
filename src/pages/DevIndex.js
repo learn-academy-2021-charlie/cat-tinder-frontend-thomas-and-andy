@@ -6,7 +6,11 @@ class DevIndex extends Component {
   render() {
     return (
       <div className="index">
-        <h3>This is the index</h3>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+        <h3 className="index-intro">Dev Jobs</h3>
         <br />
         <Col sm="6">
           {this.props.jobs &&
@@ -22,15 +26,15 @@ class DevIndex extends Component {
                     borderRadius: "100px 10px ",
                     fontFamily: "sans-serif",
                     fontSize: "35px",
-                    textAlign: "match-parent",
-                    padding: "100px",
+                    textAlign: "center",
+                    padding: "95px",
                     margin: "2px",
                   }}
                   body
                   key={job.id}
                 >
                   <CardTitle>
-                    <NavLink to={`/devshow/${job.id}`}>{job.job_title}</NavLink>
+                    <NavLink  style={{color:"white", textDecoration:"none", fontFamily:"sans-serif",fontSize:"30px"}} to={`/devshow/${job.id}`}>{job.job_title}</NavLink>
                   </CardTitle>
                 </Card>
               );

@@ -4,7 +4,7 @@ class Footer extends Component {
   render() {
     return (
       <div className="footer">
-        <GiDrippingHoney color="purple" size="5rem" opacity=".7" />
+        <GiDrippingHoney color="purple" size="5rem" opacity=".7" position />
         <h3>© Andy & Thomas</h3>
       </div>
     );

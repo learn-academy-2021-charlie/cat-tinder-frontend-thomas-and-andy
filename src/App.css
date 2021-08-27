@@ -1,12 +1,11 @@
 .page-body {
-  margin-top: 0%;
+  margin-top: 19vh;
   padding: 0%;
   text-align: center;
   min-height: 110vh;
-  margin: 0;
   background-size: cover;
   background-position: center center;
-  width: 170vh;
+  width: 175vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -15,12 +14,24 @@
   transform: all ease;
 }
 
-.cards {
-  align-items: center;
-}
 .indexCards {
-  left: 50%;
+  left: 20%;
   opacity: 0.8;
+}
+
+.card-title{
+  color:black;
+  font-size:60px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.cards{
+padding: 
+}
+
+.card-text{
+  font-size: 20px;
 }
 
 .navBar {
@@ -29,12 +40,14 @@
 }
 
 .notfound {
-  background-color: black;
-  background-image: url("https://perfectstrangersofnyc.com/wp-content/uploads/2018/02/moving-to-nyc-without-a-job.jpg");
+  margin-top: 19vh;
+  background-color: white;
+  /* background-image: url("https://perfectstrangersofnyc.com/wp-content/uploads/2018/02/moving-to-nyc-without-a-job.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
   min-height: 100vh;
+  width: 175vh;
 }
 
 .footer {
@@ -44,18 +57,19 @@
   bottom: 0;
   width: 100%;
   text-align: center;
-  min-height: 2vh;
+  min-height: 3vh;
   font-size: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   font-size: 2px;
 }
 
 .header {
   margin: 0%;
   padding: 0%;
-  position: sticky;
-  min-height: 14vh;
+  position: fixed;
+  height: 19vh;
+  min-width: 175vh;
   -webkit-background-size: cover;
   background-size: 1380px 150px;
   background-repeat: no-repeat;
@@ -69,22 +83,24 @@
   opacity: 0.6;
 }
 .home {
+  margin-top: 19vh;
   min-height: 110vh;
   background-size: cover;
   background-image: url("https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGV2ZWxvcGVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
 }
 .index {
   margin: 0;
+  margin-top: 19vh;
   background-size: cover;
   background-position: center center;
-  min-height: 110vh;
-  width: 170vh;
+  min-height: 130vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   animation: change-bg 12s infinite;
   transform: all ease;
+  width: 175vh;
 }
 @keyframes change-bg {
   0% {
@@ -118,4 +134,76 @@
   animation: change-bg 12s infinite;
   transform: all ease;
   left: 30;
+}
+
+.index-intro{ 
+  text-align: center; 
+  font-family: Helvetica, Arial, sans-serif; 
+  font-weight: bold; 
+  font-style : italic;
+  font-size: 60px;
+  color: #fff; 
+  background: red; 
+  padding: 90px 300px; 
+  text-decoration: none;
+  margin: auto;
+}
+.show-intro{
+  text-align: center; 
+  font-family: Helvetica, Arial, sans-serif; 
+  font-weight: bold; 
+  font-style : italic;
+  font-size: 60px;
+  color: #fff; 
+  background: red; 
+  padding: 90px 300px; 
+  text-decoration: none;
+  margin: auto;
+}
+.home-intro{
+  text-align: center; 
+  font-family: Helvetica, Arial, sans-serif; 
+  font-weight: bold; 
+  font-style : italic;
+  font-size: 50px;
+  color: #fff; 
+  background: red; 
+  padding: 40px 250px; 
+  text-decoration: none;
+  margin: auto;
+}
+
+.home-text{
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  background-color: #000;
+}
+
+.text-container h1{
+  font-size: 150px;
+  color: rgba(225,225,225, .1);
+  background-image: url("https://s31.postimg.cc/yaze1agjv/abstract-background-canvas-249798.jpg");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-sizxe: cover;
+  -webkit-background-clip:text;
+  animation: animate 15s linear infinite;
+  text-align: center;
+  margin-top: 17%;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+  @keyframes animate {
+    0%{
+      background-position: left 0px top 10px;
+    }
+    40%{
+      background-position: left 800px top 10px;
+  }
 }
