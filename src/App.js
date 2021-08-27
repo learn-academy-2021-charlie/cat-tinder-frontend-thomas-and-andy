@@ -7,7 +7,6 @@ import DevShow from "./pages/DevShow";
 import DevNew from "./pages/DevNew";
 import DevEdit from "./pages/DevEdit";
 import NotFound from "./pages/NotFound";
-import jobs from "./mockJobs";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -15,16 +14,60 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      jobs: jobs,
+      jobs: [],
     };
   }
-  createDevJob = (newDevJob) => {
-    console.log(newDevJob);
+  componentDidMount() {
+    this.readJob();
+  }
+
+  readJob = () => {
+    fetch("http://localhost:3000/jobs")
+      .then((response) => response.json())
+      .then((jobArray) => this.setState({ jobs: jobArray }))
+      .catch((errors) => console.log("jobs read errors:", errors));
   };
-  updateDevJob = (editdevjob, id) => {
-    console.log("job:", editdevjob);
-    console.log("id:", id);
+
+  createJob = (newJob) => {
+    fetch("http://localhost:3000/jobs", {
+      body: JSON.stringify(newJob),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    }).then((response) =>
+      response
+        .json()
+        .then((payload) => this.readJob())
+        .catch((errors) => console.log("job create errors", errors))
+    );
   };
+
+  updateJob = (editJob, id) => {
+    fetch(`http://localhost:3000/jobs/${id}`, {
+      body: JSON.stringify(editJob),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "PATCH"
+    })
+    .then(response => response.json())
+    .then(payload => this.readJob())
+    .catch(errors => console.log("job update errors:", errors))
+  }
+
+  deleteJob = (id) => {
+    fetch(`http://localhost:3000/jobs/${id}`, {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    })
+    .then(response => response.json())
+    .then(payload => this.readJob())
+    .catch(errors => console.log("job delete fetch errors:", errors))
+  }
+
   render() {
     return (
       <Router>
@@ -41,19 +84,18 @@ class App extends Component {
             render={(props) => {
               let id = props.match.params.id;
               let job = this.state.jobs.find((job) => job.id === +id);
-              return <DevShow job={job} />;
-            }}
-          />
+              return <DevShow job={job} deleteJob={this.deleteJob}/>
+            }}/>
           <Route
             path="/devnew"
-            render={(props) => <DevNew createDevJob={this.createDevJob} />}
+            render={(props) => <DevNew createJob={this.createJob} />}
           />
           <Route
             path={"/devedit/:id"}
             render={(props) => {
               let id = props.match.params.id;
               let job = this.state.jobs.find((job) => job.id === +id);
-              return <DevEdit updateDevJob={this.updateDevJob} job={job} />;
+              return <DevEdit updateJob={this.updateJob} job={job} />;
             }}
           />
           <Route component={NotFound} />

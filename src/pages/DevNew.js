@@ -24,7 +24,7 @@ class DevNew extends Component {
   };
 
   handleSubmit = () => {
-    this.props.createDevJob(this.state.form);
+    this.props.createJob(this.state.form);
     this.setState({ submitted: true });
   };
 

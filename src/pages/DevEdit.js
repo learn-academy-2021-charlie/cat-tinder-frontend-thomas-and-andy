@@ -24,7 +24,7 @@ class DevEdit extends Component {
   };
 
   handleSubmit = () => {
-    this.props.updateDevJob(this.state.form, this.props.job.id);
+    this.props.updateJob(this.state.form, this.props.job.id);
     this.setState({ submitted: true });
   };
 

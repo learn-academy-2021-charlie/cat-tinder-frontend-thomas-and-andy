@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { Card, CardTitle, Col, CardText, CardImg } from "reactstrap";
+import { Card, Button, CardTitle, Col, CardText, CardImg } from "reactstrap";
 import { NavLink } from "react-router-dom";
 
 class DevShow extends Component {
   render() {
+    let {job} = this.props
     return (
       <div className="page-body">
         <h3>This is the Show</h3>
@@ -26,8 +27,14 @@ class DevShow extends Component {
           </Card>
         </Col>
         <NavLink to={`/devedit/${this.props.job && this.props.job.id}`}>
-          <button>Edit Job Profile</button>
+          <Button>Edit Job Profile</Button>
         </NavLink>
+        <br/>
+        <NavLink to={"/devindex"}> 
+        <Button onClick={ () => this.props.deleteJob(job.id) }>
+              Delete Job Profile
+            </Button>
+            </NavLink>
       </div>
     );
   }
