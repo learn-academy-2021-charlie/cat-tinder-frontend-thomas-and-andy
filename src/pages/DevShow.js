@@ -7,7 +7,9 @@ class DevShow extends Component {
     let {job} = this.props
     return (
       <div className="page-body">
-        <h3>This is the Show</h3>
+      <br/>
+        <h3 className="show-intro">{this.props.job && this.props.job.job_title}</h3>
+        <br/>
         <Col sm="6">
           <Card className="cards">
             <CardImg
@@ -16,20 +18,19 @@ class DevShow extends Component {
               src={this.props.job && this.props.job.img}
               alt="company picture"
             />
-            <CardTitle> {this.props.job && this.props.job.job_title}</CardTitle>
-            <CardText>
-              Description: {this.props.job && this.props.job.job_description}
+            <CardTitle className="card-title"> {this.props.job && this.props.job.job_title}</CardTitle>
+            <CardText className="card-text">
+              <h3 className="card-descriptions">Description </h3> {this.props.job && this.props.job.job_description}
               <br />
-              Might enjoy {this.props.job && this.props.job.might_enjoy}
+              <h3 className="card-descriptions">Might enjoy </h3> {this.props.job && this.props.job.might_enjoy}
               <br />
-              Salary: {this.props.job && this.props.job.job_salary}.
+               <h3 className="card-descriptions">Salary</h3> {this.props.job && this.props.job.job_salary}.
             </CardText>
           </Card>
         </Col>
         <NavLink to={`/devedit/${this.props.job && this.props.job.id}`}>
           <Button>Edit Job Profile</Button>
         </NavLink>
-        <br/>
         <NavLink to={"/devindex"}> 
         <Button onClick={ () => this.props.deleteJob(job.id) }>
               Delete Job Profile

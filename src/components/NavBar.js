@@ -43,7 +43,7 @@ const NavBar = (props) => {
                     Add a Job
                   </NavLink>
                 </DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
+                <DropdownItem>Devs</DropdownItem>
                 <DropdownItem divider />
               </DropdownMenu>
             </UncontrolledDropdown>
